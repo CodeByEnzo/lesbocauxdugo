@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu du Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="logo-container">
+        <img src="./img/Logo/UGOLOGO.jpg" class="logo" alt="logo des Bocaux d'Ugo">
+    </div>
+
+    <div class="category" onclick="toggleCategory('boissons')">
+        <h2>Pour les Assoiffés</h2>
+    </div>
+
+    <div class="category" onclick="toggleCategory('nourriture')">
+        <h2>Pour les Affamés</h2>
+    </div>
+    git remote add origin https://github.com/CodeByEnzo/Carte_des_Bocaux_dUgo.git
+
+
+    <div id="fixed-boissons" class="fixed-container">
+        <button class="close-button" onclick="toggleCategory('boissons')">x</button>
+        <div class="image-gallery">
+            <img src="./img/drinks/P1.png" alt="Thé">
+            <img src="./img/drinks/P2.png" alt="Thé">
+            <img src="./img/drinks/P3.png" alt="Thé">
+            <img src="./img/drinks/P4.png" alt="Thé">
+            <img src="./img/drinks/P5.png" alt="Thé">
+            <img src="./img/drinks/P6.png" alt="Thé">
+            <img src="./img/drinks/P7.png" alt="Thé">
+            <img src="./img/drinks/P8.png" alt="Thé">
+            <img src="./img/drinks/P9.png" alt="Thé">
+        </div>
+    </div>
+
+    <div id="fixed-nourriture" class="fixed-container">
+        <button class="close-button" onclick="toggleCategory('nourriture')">x</button>
+        <div class="image-gallery">
+            <img src="entrees.png" alt="Entrées">
+            <img src="plats.png" alt="Plats">
+            <img src="desserts.png" alt="Desserts">
+        </div>
+    </div>
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
