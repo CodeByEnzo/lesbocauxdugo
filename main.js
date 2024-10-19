@@ -8,10 +8,12 @@ function toggleCategory(categoryId) {
     if (currentOpenCategory === categoryId) {
         container.classList.remove('active'); // Fermer le container
         currentOpenCategory = null; // Aucune catégorie ouverte
+        hideScrollTopButton(); // Cacher la flèche quand la catégorie est fermée
     } else {
         // Fermer la catégorie précédemment ouverte (s'il y en a une)
         if (currentOpenCategory) {
             document.getElementById(`fixed-${currentOpenCategory}`).classList.remove('active');
+            hideScrollTopButton(); // Cacher la flèche lorsque l'on ferme une catégorie
         }
         // Ouvrir la nouvelle catégorie
         container.classList.add('active');
@@ -28,7 +30,7 @@ function toggleCategory(categoryId) {
     }
 }
 
-// Affiche le bouton quand l'utilisateur a défilé vers le bas de 100px dans la galerie
+// Affiche le bouton quand l'utilisateur a défilé vers le bas de 600px dans la galerie
 function showScrollTopButton(imageGallery) {
     const scrollTopBtn = document.getElementById("scrollTopBtn");
     if (!scrollTopBtn) return; // Si le bouton n'existe pas, arrêter la fonction
@@ -37,6 +39,14 @@ function showScrollTopButton(imageGallery) {
     if (imageGallery.scrollTop > 600) {
         scrollTopBtn.style.display = "block"; // Afficher le bouton
     } else {
+        scrollTopBtn.style.display = "none"; // Cacher le bouton
+    }
+}
+
+// Cacher le bouton de retour en haut
+function hideScrollTopButton() {
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    if (scrollTopBtn) {
         scrollTopBtn.style.display = "none"; // Cacher le bouton
     }
 }

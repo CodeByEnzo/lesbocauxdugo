@@ -64,6 +64,10 @@ h1 {
     height: 791px;
 }
 
+.img-gallery-food {
+    scale: 1.0;
+}
+
 .image-gallery img:first-child {
     margin-top: 60px;
 }
