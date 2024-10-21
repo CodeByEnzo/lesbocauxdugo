@@ -69,7 +69,7 @@ h1 {
 }
 
 .image-gallery img:first-child {
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 .image-gallery img:last-child {
