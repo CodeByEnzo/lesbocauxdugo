@@ -31,7 +31,6 @@ h1 {
 
 .category:hover {
     background-color: #ffc400;
-    transform: translateY(-5px);
 }
 
 .fixed-container {
@@ -78,6 +77,20 @@ h1 {
     .image-gallery {
         width: 50%;
     }
+
+    .category {
+        width: 300px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .image-gallery img:first-child {
+        margin-top: 10px;
+    }
+
+    .image-gallery img:last-child {
+        margin-bottom: 10px;
+    }
 }
 
 .img-gallery-food {
@@ -104,12 +117,18 @@ h1 {
     top: 20px;
     right: 20px;
     background-color: #ff6347;
+    font-size: 23px;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 4px;
-    z-index: 1000;
+    z-index: 1010;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .close-button:hover {
