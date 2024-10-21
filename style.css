@@ -64,6 +64,21 @@ h1 {
     height: 791px;
 }
 
+@media screen and (min-width: 500px) {
+    .image-gallery img:first-child {
+        margin-top: 200px;
+    }
+
+    .image-gallery img:last-child {
+        margin-bottom: 200px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .image-gallery {
+        width: 50%;
+    }
+}
+
 .img-gallery-food {
     scale: 1.0;
 }
